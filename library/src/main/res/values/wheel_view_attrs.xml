@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WheelView">
+        <attr name="android:textSize" />
+        <attr name="dividerColor" format="color" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="itemCount" format="integer" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="textColorFading" format="color" />
+        <attr name="textColorNormal" format="color" />
+    </declare-styleable>
+
+</resources>
