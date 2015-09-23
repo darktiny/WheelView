@@ -57,21 +57,27 @@ public class WheelView extends View {
     private VelocityTracker mVelocityTracker;
 
     public WheelView(Context context) {
-        this(context, null);
+        super(context);
+        init(context, null, 0, 0);
     }
 
     public WheelView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
+        super(context, attrs);
+        init(context, attrs, 0, 0);
     }
 
     public WheelView(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
+        super(context, attrs, defStyleAttr);
+        init(context, attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public WheelView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs, defStyleAttr, defStyleRes);
+    }
 
+    private void init(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         Resources resources = getResources();
         TypedArray typedArray = context.obtainStyledAttributes(
                 attrs, R.styleable.WheelView, defStyleAttr, defStyleRes
